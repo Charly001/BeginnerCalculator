@@ -15,6 +15,19 @@ import javax.swing.JTextField;
 
 class PanelCalculadora extends JPanel{
 
+	//Campos que conforman el teclado
+	private final JButton CANT_BOTONES []= new JButton[16];
+	private final String CONTENIDO_BOTON []=  {"7", "8", "9", "x", "4", "5", "6", "-", "1", "2", "3", "+", ".", "0", "=", "/"};
+	//-----------------------------------------------------------
+	
+	private JTextField pantalla;
+	private boolean comienzo; //quitara 0 en pantalla al iniciar el programa
+	private String entrada;
+	private String operacion;
+	private String ultimaOperacion="";
+	private double resultado;
+	private double valorAnterior;
+	
 	public PanelCalculadora() {
 		
 		setLayout(new BorderLayout());
@@ -69,7 +82,7 @@ class PanelCalculadora extends JPanel{
 	
 		//---------------EVENTOS---------------------------
 		
-//Clase interna para respuestas botones sin operaciones matem·ticas
+//Clase interna para respuestas botones sin operaciones matem√°ticas
 private class EventosValores implements ActionListener { 
 		 														  
 		@Override
@@ -96,7 +109,7 @@ private class EventosValores implements ActionListener {
 			}
 		}
 			
-//Clase interna para respuestas botones con operaciones matem·ticas
+//Clase interna para respuestas botones con operaciones matem√°ticas
 private class EventosOperacion implements ActionListener { 
 
 			@Override
@@ -177,23 +190,6 @@ private class EventosOperacion implements ActionListener {
 		//--------------------------------------------------------
 
 	
-	//Campos que conforman el teclado
-	private final JButton CANT_BOTONES []= new JButton[16];
-	private final String CONTENIDO_BOTON []=  {"7", "8", "9", "x", "4", "5", "6", "-", "1", "2", "3", "+", ".", "0", "=", "/"};
-	//-----------------------------------------------------------
 	
-	private JTextField pantalla;
-	
-	private boolean comienzo; //quitara 0 en pantalla al iniciar el programa
-	
-	private String entrada;
-	
-	private String operacion;
-	
-	private String ultimaOperacion="";
-	
-	private double resultado;
-	
-	private double valorAnterior;
 
 }
